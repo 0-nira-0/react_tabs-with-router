@@ -5,11 +5,8 @@ import {
   NavLink,
   NavLinkRenderProps,
   Outlet,
-  useLocation,
-  useNavigate,
 } from 'react-router-dom';
 import classNames from 'classnames';
-import { useEffect } from 'react';
 
 const isLinkActive = ({
   isActive,
@@ -18,14 +15,6 @@ const isLinkActive = ({
 }) => classNames('navbar-item', { 'is-active': isActive });
 
 export const App = () => {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (location.pathname === '/home') {
-      navigate('/');
-    }
-  }, []);
 
   return (
     <>
@@ -37,7 +26,7 @@ export const App = () => {
         >
           <div className="container">
             <div className="navbar-brand">
-              <NavLink to=".." className={isLinkActive}>
+              <NavLink to="/" className={isLinkActive}>
                 Home
               </NavLink>
               <NavLink to="/tabs" className={isLinkActive}>
