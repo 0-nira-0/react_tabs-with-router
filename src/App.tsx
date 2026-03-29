@@ -1,11 +1,7 @@
 import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
-import {
-  NavLink,
-  NavLinkRenderProps,
-  Outlet,
-} from 'react-router-dom';
+import { NavLink, NavLinkRenderProps, Outlet } from 'react-router-dom';
 import classNames from 'classnames';
 
 const isLinkActive = ({
@@ -15,11 +11,8 @@ const isLinkActive = ({
 }) => classNames('navbar-item', { 'is-active': isActive });
 
 export const App = () => {
-
   return (
     <>
-      {/* Also requires <html class="has-navbar-fixed-top"> */}
-      <html className="has-navbar-fixed-top">
         <nav
           className="navbar is-light is-fixed-top is-mobile has-shadow"
           data-cy="Nav"
@@ -41,7 +34,6 @@ export const App = () => {
             <Outlet />
           </div>
         </div>
-      </html>
     </>
   );
 };

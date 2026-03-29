@@ -1,4 +1,4 @@
-import { TabT } from "../types/Tab";
+import { TabT } from '../types/Tab';
 
 export const tabs: TabT[] = [
   { id: 'tab-1', title: 'Tab 1', content: 'Some text 1' },
